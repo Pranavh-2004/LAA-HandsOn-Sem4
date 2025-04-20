@@ -1,0 +1,55 @@
+Smart City Sensor Analysis
+
+As part of a smart city initiative, sensor data is collected from various intersections and stored in a matrix. This data helps monitor and optimize traffic flow. However, due to sensor errors or redundant readings, the matrix may become singular, affecting further analyses that require matrix inversion, such as traffic forecasting and signal optimization.
+
+Your task is to:
+    Determine if the given sensor data matrix is singular.
+    If the matrix is not singular, compute its inverse.
+
+The matrix may not always be square. If it is not square, the Moore-Penrose pseudo-inverse should be computed instead.
+
+--------------------------------------------------------------------------------------------
+
+Input Format
+
+    An integer n, the number of rows in the matrix.
+    n lines, each containing space-separated floating-point numbers representing the rows of the matrix.
+
+Output Format
+If the matrix is singular, print:
+    The matrix is singular.
+
+If the matrix is not singular, print:
+    The matrix is not singular.
+    Inverse of the matrix: 
+    <rounded inverse matrix>
+where the inverse matrix is rounded to 2 decimal places.
+
+--------------------------------------------------------------------------------------------
+
+Public Test Cases
+
+Test Case 1
+Input:
+3
+1 2 3
+0 1 4
+5 6 0
+
+Output
+The matrix is not singular.
+Inverse of the matrix: 
+[[-24.  18.   5.]
+ [ 20. -15.  -4.]
+ [ -5.   4.   1.]]
+
+--------------------------------------------------------------------------------------------
+Test Case 2
+Input:
+3
+2 4 6
+1 2 3
+3 6 9
+
+Output
+The matrix is singular.
